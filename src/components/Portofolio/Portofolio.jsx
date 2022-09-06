@@ -24,12 +24,12 @@ function Portofolio() {
   return (
     <div className='max-w-screen-xl px-4 pb-20 md:px-0 mx-auto'>
       <section id='portofolio' className='relative sm:px-6 lg:px-8'>
-        <div className='text-black text-3xl font-bold my-6'>Portofolio</div>
+        <div data-aos="fade-up" className='text-black text-3xl font-bold my-6'>Portofolio</div>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-x-3 gap-y-3'>
             {
               portofolios.map((portofolio, index) => {
                 return (
-                  <div key={ index } className='flex flex-col'>
+                  <div data-aos="fade-up" data-aos-delay={index * 100} key={ index } className='flex flex-col'>
                     <img className='object-cover aspect-[1/1]' src={ portofolio.image_url } alt='' />
                   </div>
                 )

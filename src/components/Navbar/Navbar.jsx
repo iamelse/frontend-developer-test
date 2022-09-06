@@ -1,8 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const navigation = [
     { name: 'Home', href: '#home' },
@@ -13,11 +15,15 @@ const navigation = [
   ]
 
 function Navbar() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className='max-w-screen-xl px-4 md:px-0 mx-auto'>      
         <Popover>
             <div className='relative py-6 sm:px-6 lg:px-8'>
-              <nav className='relative flex items-center justify-between sm:h-10' aria-label='Global'>
+              <nav data-aos="fade-down" className='relative flex items-center justify-between sm:h-10' aria-label='Global'>
                 <div className='flex flex-shrink-0 flex-grow items-center lg:flex-grow-0'>
                   <div className='flex w-full items-center justify-between md:w-auto'>
                     <a href='/'>

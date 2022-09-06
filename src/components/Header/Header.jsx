@@ -2,7 +2,7 @@ function Header() {
   return (
     <div className='max-w-screen-xl px-4 md:px-0 mx-auto'>
       <section id='home' className='relative sm:px-6 lg:px-8'>
-        <div className='container'>
+        <div data-aos="zoom-in" className='container'>
           <div className='flex flex-wrap py-20'>
             <div className='w-full lg:w-2/3 self-start'>
               <h1 className='text-black text-7xl font-bold'>
