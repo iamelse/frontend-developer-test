@@ -29,9 +29,9 @@ function Portofolio() {
             {
               portofolios.map((portofolio, index) => {
                 return (
-                  <div data-aos="fade-up" data-aos-delay={index * 100} key={ index } className='flex flex-col'>
+                  <a href={ portofolio.description } target="_blank" data-aos="fade-up" data-aos-delay={index * 100} key={ index } className='flex flex-col'>
                     <img className='object-cover aspect-[1/1]' src={ portofolio.image_url } alt='' />
-                  </div>
+                  </a>
                 )
               })
             }
