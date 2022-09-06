@@ -30,7 +30,7 @@ function Portofolio() {
               portofolios.map((portofolio, index) => {
                 return (
                   <a href={ portofolio.description } target="_blank" data-aos="fade-up" data-aos-delay={index * 100} key={ index } className='flex flex-col'>
-                    <img className='object-cover aspect-[1/1]' src={ portofolio.image_url } alt='' />
+                    <img className='object-cover hover:scale-110 ease-in duration-100 aspect-[1/1]' src={ portofolio.image_url } alt='' />
                   </a>
                 )
               })
